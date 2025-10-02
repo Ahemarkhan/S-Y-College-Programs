@@ -1,0 +1,8 @@
+#include <stdio.h>
+int main() {
+    int a[] = {1,2,2,3,1,4,2}, n=7, max=4;
+    int freq[10] = {0};
+    for(int i=0;i<n;i++) freq[a[i]]++;
+    for(int i=1;i<=max;i++) printf("%d -> %d\n", i, freq[i]);
+    return 0;
+}
