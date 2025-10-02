@@ -1,0 +1,10 @@
+#include <stdio.h>
+int main() {
+    int a=0,b=1,c=0;
+    for(;;){
+        printf("%d ", a);
+        c=a+b; a=b; b=c;
+        if(a>1000) break;
+    }
+    return 0;
+}
