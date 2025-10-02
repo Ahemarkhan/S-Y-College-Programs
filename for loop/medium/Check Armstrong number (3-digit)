@@ -1,0 +1,11 @@
+#include <stdio.h>
+#include <math.h>
+int main() {
+    int n=153, tmp=n, sum=0;
+    for(; tmp>0; tmp/=10) {
+        int d = tmp%10;
+        sum += d*d*d;
+    }
+    printf("%d", (sum==n) ? printf("Armstrong\n") : printf("Not Armstrong\n"));
+    return 0;
+}
