@@ -1,0 +1,11 @@
+#include <stdio.h>
+#include <string.h>
+int main() {
+    int N=50;
+    int isPrime[51]; for(int i=0;i<=N;i++) isPrime[i]=1;
+    isPrime[0]=isPrime[1]=0;
+    for(int p=2;p*p<=N;p++) if(isPrime[p])
+        for(int k=p*p;k<=N;k+=p) isPrime[k]=0;
+    for(int i=2;i<=N;i++) if(isPrime[i]) printf("%d ", i);
+    return 0;
+}
