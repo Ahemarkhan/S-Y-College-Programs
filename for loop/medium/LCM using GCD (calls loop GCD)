@@ -1,0 +1,9 @@
+#include <stdio.h>
+int gcd(int x,int y){ for(; y!=0; ){ int t=x%y; x=y; y=t; } return x; }
+int main() {
+    int a=12,b=15;
+    int g=gcd(a,b);
+    long l=(long)a/g*b;
+    printf("LCM = %ld", l);
+    return 0;
+}
