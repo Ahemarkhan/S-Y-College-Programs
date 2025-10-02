@@ -1,0 +1,10 @@
+#include <stdio.h>
+int main() {
+    int num=59382, max=0;
+    for(; num>0; num/=10) {
+        int d=num%10;
+        if(d>max) max=d;
+    }
+    printf("Greatest digit = %d", max);
+    return 0;
+}
