@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <string.h>
+int main() {
+    char s[] = "abcXYZ";
+    for(int i=0;i<strlen(s);i++){
+        char ch=s[i];
+        if(ch>='a'&&ch<='z') s[i]= 'a' + (ch-'a'+3)%26;
+        else if(ch>='A'&&ch<='Z') s[i]= 'A' + (ch-'A'+3)%26;
+    }
+    printf("%s", s);
+    return 0;
+}
