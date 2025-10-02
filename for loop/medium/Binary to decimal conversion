@@ -1,0 +1,9 @@
+#include <stdio.h>
+int main() {
+    int bin = 101101, dec=0, p=1;
+    for(; bin>0; bin/=10) { dec += (bin%10)*p; p*=2; }
+    printf("Decimal = %d", dec);
+    return 0;
+}
+c
+Copy code
