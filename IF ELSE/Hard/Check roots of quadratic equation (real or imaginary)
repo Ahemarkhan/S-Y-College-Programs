@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() {
+    float a,b,c,dis;
+    printf("Enter coefficients a, b, c: ");
+    scanf("%f%f%f", &a, &b, &c);
+
+    dis = b*b - 4*a*c;
+    if(dis > 0)
+        printf("Real and distinct roots");
+    else if(dis == 0)
+        printf("Real and equal roots");
+    else
+        printf("Imaginary roots");
+    return 0;
+}
