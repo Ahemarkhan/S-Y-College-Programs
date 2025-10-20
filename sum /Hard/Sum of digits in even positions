@@ -1,0 +1,14 @@
+#include <stdio.h>
+int main() {
+    int n, pos = 1, d, sum = 0;
+    printf("Enter number: ");
+    scanf("%d", &n);
+    while(n > 0) {
+        d = n % 10;
+        if(pos % 2 == 0) sum += d;
+        pos++;
+        n /= 10;
+    }
+    printf("Sum of even-position digits = %d", sum);
+    return 0;
+}
