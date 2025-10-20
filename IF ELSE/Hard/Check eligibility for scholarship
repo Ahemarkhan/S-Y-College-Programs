@@ -1,0 +1,17 @@
+#include <stdio.h>
+int main() {
+    int marks;
+    char income;
+    printf("Enter marks: ");
+    scanf("%d", &marks);
+    printf("Family income low? (y/n): ");
+    scanf(" %c", &income);
+    if(marks >= 85){
+        if(income == 'y' || income == 'Y') printf("Eligible for full scholarship");
+        else printf("Eligible for half scholarship");
+    } else if(marks >= 70){
+        if(income == 'y' || income == 'Y') printf("Eligible for half scholarship");
+        else printf("No scholarship");
+    } else printf("Not eligible");
+    return 0;
+}
