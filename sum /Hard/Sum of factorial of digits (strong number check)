@@ -1,0 +1,18 @@
+#include <stdio.h>
+int main() {
+    int n, temp, sum = 0, d, fact;
+    printf("Enter number: ");
+    scanf("%d", &n);
+    temp = n;
+    while(n > 0) {
+        d = n % 10;
+        fact = 1;
+        for(int i = 1; i <= d; i++) fact *= i;
+        sum += fact;
+        n /= 10;
+    }
+    printf("Sum of factorial digits = %d", sum);
+    return 0;
+}
+c
+Copy code
