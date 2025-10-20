@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() {
+    float p, r, t, si, ci;
+    printf("Enter principal, rate and time: ");
+    scanf("%f %f %f", &p, &r, &t);
+
+    si = (p*r*t)/100;
+    ci = p*(1+r/100)*(1+r/100)*(1+r/100) - p; // for 3 years
+
+    if(si > ci)
+        printf("Simple Interest is greater: %.2f", si);
+    else
+        printf("Compound Interest is greater: %.2f", ci);
+    return 0;
+}
