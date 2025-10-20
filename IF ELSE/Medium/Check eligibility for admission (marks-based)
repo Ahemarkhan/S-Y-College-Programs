@@ -1,0 +1,14 @@
+#include <stdio.h>
+int main() {
+    int math, phy, chem, total;
+    printf("Enter marks in Math, Physics, and Chemistry: ");
+    scanf("%d %d %d", &math, &phy, &chem);
+
+    total = math + phy + chem;
+
+    if(math >= 65 && phy >= 55 && chem >= 50 && total >= 180)
+        printf("Eligible for Admission");
+    else
+        printf("Not Eligible");
+    return 0;
+}
