@@ -1,0 +1,10 @@
+#include <stdio.h>
+int sumRecursive(int a[], int n){
+    if(n==0) return 0;
+    return a[n-1] + sumRecursive(a, n-1);
+}
+int main(){
+    int a[5]={1,2,3,4,5};
+    printf("Sum = %d", sumRecursive(a,5));
+    return 0;
+}
