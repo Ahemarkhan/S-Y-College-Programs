@@ -1,0 +1,17 @@
+#include <stdio.h>
+int secondSmallest(int a[], int n){
+    int min=a[0], second=9999;
+    for(int i=1;i<n;i++){
+        if(a[i]<min){
+            second=min;
+            min=a[i];
+        } else if(a[i]<second && a[i]!=min)
+            second=a[i];
+    }
+    return second;
+}
+int main(){
+    int a[5]={5,2,9,1,6};
+    printf("Second smallest = %d", secondSmallest(a,5));
+    return 0;
+}
