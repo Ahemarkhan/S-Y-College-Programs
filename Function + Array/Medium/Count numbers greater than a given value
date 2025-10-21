@@ -1,0 +1,12 @@
+#include <stdio.h>
+int countGreater(int a[], int n, int x){
+    int c=0;
+    for(int i=0;i<n;i++)
+        if(a[i]>x) c++;
+    return c;
+}
+int main(){
+    int a[6]={10,20,30,40,50,60};
+    printf("Count > 30 = %d", countGreater(a,6,30));
+    return 0;
+}
