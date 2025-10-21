@@ -1,0 +1,12 @@
+#include <stdio.h>
+int minInArray(int a[], int n){
+    int min=a[0];
+    for(int i=1;i<n;i++)
+        if(a[i]<min) min=a[i];
+    return min;
+}
+int main(){
+    int a[5]={10,30,20,5,40};
+    printf("Min = %d", minInArray(a,5));
+    return 0;
+}
