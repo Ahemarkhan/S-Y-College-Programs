@@ -1,0 +1,13 @@
+#include <stdio.h>
+int countDuplicates(int a[], int n){
+    int count=0;
+    for(int i=0;i<n;i++)
+        for(int j=i+1;j<n;j++)
+            if(a[i]==a[j]){ count++; break; }
+    return count;
+}
+int main(){
+    int a[8]={1,2,3,2,4,1,5,3};
+    printf("Duplicates = %d", countDuplicates(a,8));
+    return 0;
+}
