@@ -1,0 +1,14 @@
+#include <stdio.h>
+void countPosNeg(int a[], int n){
+    int pos=0, neg=0;
+    for(int i=0;i<n;i++){
+        if(a[i]>0) pos++;
+        else if(a[i]<0) neg++;
+    }
+    printf("Positive=%d Negative=%d", pos, neg);
+}
+int main(){
+    int a[6]={-1,2,-3,4,5,-6};
+    countPosNeg(a,6);
+    return 0;
+}
