@@ -1,0 +1,14 @@
+#include <stdio.h>
+int main() {
+    char dir;
+    printf("Enter direction (N, S, E, W): ");
+    scanf(" %c", &dir);
+    switch(dir) {
+        case 'N': printf("Moving North\n"); break;
+        case 'S': printf("Moving South\n"); break;
+        case 'E': printf("Moving East\n"); break;
+        case 'W': printf("Moving West\n"); break;
+        default: printf("Invalid direction\n");
+    }
+    return 0;
+}
