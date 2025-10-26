@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main() {
+    int choice;
+    float time;
+    printf("1.Hours->Minutes 2.Minutes->Seconds 3.Seconds->Hours: ");
+    scanf("%d", &choice);
+    printf("Enter time: ");
+    scanf("%f", &time);
+    switch(choice) {
+        case 1: printf("Minutes = %.2f\n", time*60); break;
+        case 2: printf("Seconds = %.2f\n", time*60); break;
+        case 3: printf("Hours = %.2f\n", time/3600); break;
+        default: printf("Invalid option");
+    }
+    return 0;
+}
