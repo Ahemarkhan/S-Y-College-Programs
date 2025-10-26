@@ -1,0 +1,13 @@
+#include <stdio.h>
+int main() {
+    int n,ch,i,j;
+    printf("Enter size: "); scanf("%d",&n);
+    printf("1.Triangle 2.Square 3.Reverse Triangle: "); scanf("%d",&ch);
+    switch(ch) {
+        case 1: for(i=1;i<=n;i++){ for(j=1;j<=i;j++) printf("* "); printf("\n"); } break;
+        case 2: for(i=1;i<=n;i++){ for(j=1;j<=n;j++) printf("* "); printf("\n"); } break;
+        case 3: for(i=n;i>=1;i--){ for(j=1;j<=i;j++) printf("* "); printf("\n"); } break;
+        default: printf("Invalid");
+    }
+    return 0;
+}
