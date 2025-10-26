@@ -1,0 +1,13 @@
+#include <stdio.h>
+int main() {
+    int sys;
+    printf("Enter system mode (1=Startup, 2=Run, 3=Shutdown): ");
+    scanf("%d", &sys);
+    switch(sys) {
+        case 1: printf("System Starting...\n"); break;
+        case 2: printf("System Running...\n"); break;
+        case 3: printf("System Shutting Down...\n"); break;
+        default: printf("Invalid mode.\n");
+    }
+    return 0;
+}
