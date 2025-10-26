@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str[100];
+    printf("Enter command: ");
+    gets(str);
+    if (strstr(str, "start"))
+        printf("Command: START detected");
+    else if (strstr(str, "stop"))
+        printf("Command: STOP detected");
+    else
+        printf("Unknown command");
+    return 0;
+}
