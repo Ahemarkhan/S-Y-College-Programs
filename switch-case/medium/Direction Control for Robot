@@ -1,0 +1,14 @@
+#include <stdio.h>
+int main() {
+    char cmd;
+    printf("Enter command (F=Forward, B=Backward, L=Left, R=Right): ");
+    scanf(" %c", &cmd);
+    switch(cmd) {
+        case 'F': printf("Robot moves forward.\n"); break;
+        case 'B': printf("Robot moves backward.\n"); break;
+        case 'L': printf("Robot turns left.\n"); break;
+        case 'R': printf("Robot turns right.\n"); break;
+        default: printf("Invalid command.\n");
+    }
+    return 0;
+}
