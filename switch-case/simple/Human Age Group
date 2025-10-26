@@ -1,0 +1,13 @@
+#include <stdio.h>
+int main() {
+    int age;
+    printf("Enter age: ");
+    scanf("%d", &age);
+    switch(age / 10) {
+        case 0: case 1: printf("Child\n"); break;
+        case 2: printf("Young Adult\n"); break;
+        case 3: case 4: printf("Adult\n"); break;
+        default: printf("Senior Citizen\n");
+    }
+    return 0;
+}
