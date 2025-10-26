@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char line[200];
+    printf("Enter CSV line (name,age,city): ");
+    gets(line);
+
+    char *token = strtok(line, ",");
+    int i = 1;
+    while (token) {
+        printf("Field %d: %s\n", i++, token);
+        token = strtok(NULL, ",");
+    }
+    return 0;
+}
