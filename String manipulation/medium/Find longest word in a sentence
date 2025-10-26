@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str[200], word[50], longest[50] = "";
+    printf("Enter a sentence: ");
+    gets(str);
+
+    char *token = strtok(str, " ");
+    while (token != NULL) {
+        if (strlen(token) > strlen(longest))
+            strcpy(longest, token);
+        token = strtok(NULL, " ");
+    }
+    printf("Longest word: %s\n", longest);
+    return 0;
+}
