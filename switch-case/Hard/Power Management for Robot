@@ -1,0 +1,13 @@
+#include <stdio.h>
+int main() {
+    int battery;
+    printf("Enter battery percent: "); scanf("%d",&battery);
+    switch(battery/25) {
+        case 0: printf("Critical - Shut down soon\n"); break;
+        case 1: printf("Low Power Mode\n"); break;
+        case 2: printf("Medium Power\n"); break;
+        case 3: case 4: printf("Full Power\n"); break;
+        default: printf("Invalid input\n");
+    }
+    return 0;
+}
