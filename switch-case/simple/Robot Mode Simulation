@@ -1,0 +1,13 @@
+#include <stdio.h>
+int main() {
+    int mode;
+    printf("Enter robot mode (1=Idle, 2=Active, 3=Error): ");
+    scanf("%d", &mode);
+    switch(mode) {
+        case 1: printf("Robot is IDLE.\n"); break;
+        case 2: printf("Robot is ACTIVE.\n"); break;
+        case 3: printf("Robot has an ERROR.\n"); break;
+        default: printf("Invalid mode.\n");
+    }
+    return 0;
+}
