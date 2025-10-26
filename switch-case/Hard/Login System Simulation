@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <string.h>
+int main() {
+    char user[20], pass[20];
+    int attempts=3, choice;
+    while(attempts--) {
+        printf("Username: "); scanf("%s",user);
+        printf("Password: "); scanf("%s",pass);
+        if(strcmp(user,"admin")==0 && strcmp(pass,"1234")==0) {
+            printf("Login successful!\n");
+            do {
+                printf("\n1.Profile 2.Settings 3.Logout: ");
+                scanf("%d",&choice);
+                switch(choice) {
+                    case 1: printf("Profile Page\n"); break;
+                    case 2: printf("Settings Page\n"); break;
+                    case 3: break;
+                    default: printf("Invalid\n");
+                }
+            } while(choice!=3);
+            return 0;
+        } else printf("Wrong credentials. Attempts left: %d\n",attempts);
+    }
+    printf("Account locked.\n");
+    return 0;
+}
