@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() {
+    int type; float qty;
+    printf("1.Cement 2.Sand 3.Steel 4.Wood: ");
+    scanf("%d",&type);
+    printf("Enter quantity in tons: "); scanf("%f",&qty);
+    switch(type) {
+        case 1: printf("Cost = ₹%.2f\n", qty*350); break;
+        case 2: printf("Cost = ₹%.2f\n", qty*120); break;
+        case 3: printf("Cost = ₹%.2f\n", qty*50000); break;
+        case 4: printf("Cost = ₹%.2f\n", qty*15000); break;
+        default: printf("Invalid\n");
+    }
+    return 0;
+}
