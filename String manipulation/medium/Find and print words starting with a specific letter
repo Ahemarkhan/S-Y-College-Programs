@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+int main() {
+    char str[200];
+    char letter;
+    printf("Enter a sentence: ");
+    gets(str);
+    printf("Enter starting letter: ");
+    scanf("%c", &letter);
+    letter = tolower(letter);
+
+    char *token = strtok(str, " ");
+    while (token != NULL) {
+        if (tolower(token[0]) == letter)
+            printf("%s\n", token);
+        token = strtok(NULL, " ");
+    }
+    return 0;
+}
