@@ -1,0 +1,13 @@
+#include <stdio.h>
+int main() {
+    int mode;
+    printf("Enter mode (1=Silent, 2=Vibrate, 3=Ringing): ");
+    scanf("%d", &mode);
+    switch(mode) {
+        case 1: printf("Phone is in Silent Mode.\n"); break;
+        case 2: printf("Phone is in Vibrate Mode.\n"); break;
+        case 3: printf("Phone is Ringing.\n"); break;
+        default: printf("Invalid mode.\n");
+    }
+    return 0;
+}
