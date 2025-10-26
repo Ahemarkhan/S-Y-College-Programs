@@ -1,0 +1,14 @@
+#include <stdio.h>
+int main() {
+    int button;
+    printf("Press (1=Power, 2=Volume+, 3=Volume-, 4=Channel+): ");
+    scanf("%d", &button);
+    switch(button) {
+        case 1: printf("Power toggled.\n"); break;
+        case 2: printf("Volume increased.\n"); break;
+        case 3: printf("Volume decreased.\n"); break;
+        case 4: printf("Next channel.\n"); break;
+        default: printf("Invalid button.\n");
+    }
+    return 0;
+}
