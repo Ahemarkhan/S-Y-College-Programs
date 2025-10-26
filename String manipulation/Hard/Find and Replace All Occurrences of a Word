@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str[200], oldWord[50], newWord[50], result[300] = "";
+    printf("Enter a string: ");
+    gets(str);
+    printf("Word to replace: ");
+    gets(oldWord);
+    printf("New word: ");
+    gets(newWord);
+
+    char *pos = str;
+    while ((pos = strstr(pos, oldWord)) != NULL) {
+        strncat(result, str, pos - str);
+        strcat(result, newWord);
+        pos += strlen(oldWord);
+        strcpy(str, pos);
+        pos = str;
+    }
+    strcat(result, str);
+    printf("Updated string: %s\n", result);
+    return 0;
+}
