@@ -1,0 +1,14 @@
+#include <stdio.h>
+int main() {
+    int dir;
+    printf("1.North 2.South 3.East 4.West: ");
+    scanf("%d",&dir);
+    switch(dir) {
+        case 1: printf("Green: North, Red: others.\n"); break;
+        case 2: printf("Green: South, Red: others.\n"); break;
+        case 3: printf("Green: East, Red: others.\n"); break;
+        case 4: printf("Green: West, Red: others.\n"); break;
+        default: printf("Invalid\n");
+    }
+    return 0;
+}
