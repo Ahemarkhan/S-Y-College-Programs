@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str[100];
+    printf("Enter a string: ");
+    gets(str);
+    int len = strlen(str);
+    char temp = str[0];
+    str[0] = str[len - 1];
+    str[len - 1] = temp;
+    printf("After swapping: %s\n", str);
+    return 0;
+}
