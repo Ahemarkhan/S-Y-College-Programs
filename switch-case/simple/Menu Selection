@@ -1,0 +1,14 @@
+#include <stdio.h>
+int main() {
+    int choice;
+    printf("1.Pizza 2.Burger 3.Pasta 4.Exit\nEnter choice: ");
+    scanf("%d", &choice);
+    switch(choice) {
+        case 1: printf("You ordered Pizza.\n"); break;
+        case 2: printf("You ordered Burger.\n"); break;
+        case 3: printf("You ordered Pasta.\n"); break;
+        case 4: printf("Exiting...\n"); break;
+        default: printf("Invalid choice.\n");
+    }
+    return 0;
+}
