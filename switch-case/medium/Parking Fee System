@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() {
+    int vtype, hrs;
+    printf("1.Car 2.Bike 3.Bus: ");
+    scanf("%d", &vtype);
+    printf("Enter parking hours: ");
+    scanf("%d", &hrs);
+    switch(vtype) {
+        case 1: printf("Fee = %d\n", hrs*50); break;
+        case 2: printf("Fee = %d\n", hrs*20); break;
+        case 3: printf("Fee = %d\n", hrs*100); break;
+        default: printf("Invalid vehicle type\n");
+    }
+    return 0;
+}
