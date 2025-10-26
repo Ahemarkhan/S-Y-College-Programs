@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main() {
+    int gear;
+    printf("Enter gear (0=Neutral, 1–5=Drive): ");
+    scanf("%d", &gear);
+    switch(gear) {
+        case 0: printf("Neutral\n"); break;
+        case 1: printf("First Gear\n"); break;
+        case 2: printf("Second Gear\n"); break;
+        case 3: printf("Third Gear\n"); break;
+        case 4: printf("Fourth Gear\n"); break;
+        case 5: printf("Fifth Gear\n"); break;
+        default: printf("Invalid gear\n");
+    }
+    return 0;
+}
