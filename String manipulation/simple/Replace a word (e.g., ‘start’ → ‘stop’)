@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str[100];
+    printf("Enter a command: ");
+    gets(str);
+    if (strstr(str, "start"))
+        strcpy(str, "stop");
+    printf("Modified command: %s", str);
+    return 0;
+}
