@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+int main() {
+    char text[200];
+    printf("Enter text: ");
+    gets(text);
+
+    printf("Without punctuation: ");
+    for (int i = 0; text[i]; i++)
+        if (isalnum(text[i]) || isspace(text[i]))
+            printf("%c", text[i]);
+
+    return 0;
+}
