@@ -1,0 +1,13 @@
+#include <stdio.h>
+int main() {
+    int level;
+    printf("Enter battery level (1=Low, 2=Medium, 3=Full): ");
+    scanf("%d", &level);
+    switch(level) {
+        case 1: printf("Battery Low - Charge soon.\n"); break;
+        case 2: printf("Battery Medium - Okay.\n"); break;
+        case 3: printf("Battery Full - Good.\n"); break;
+        default: printf("Invalid level.\n");
+    }
+    return 0;
+}
