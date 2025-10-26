@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main() {
+    int ch;
+    float amt;
+    printf("1.INR->USD 2.USD->INR 3.INR->EUR: ");
+    scanf("%d", &ch);
+    printf("Enter amount: ");
+    scanf("%f", &amt);
+    switch(ch) {
+        case 1: printf("USD = %.2f\n", amt/83.0); break;
+        case 2: printf("INR = %.2f\n", amt*83.0); break;
+        case 3: printf("EUR = %.2f\n", amt/90.0); break;
+        default: printf("Invalid");
+    }
+    return 0;
+}
