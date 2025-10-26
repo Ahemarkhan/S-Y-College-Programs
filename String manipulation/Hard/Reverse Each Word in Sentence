@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <string.h>
+
+void reverse(char *str) {
+    int len = strlen(str);
+    for (int i = len - 1; i >= 0; i--)
+        printf("%c", str[i]);
+}
+
+int main() {
+    char text[200];
+    printf("Enter sentence: ");
+    gets(text);
+
+    char *token = strtok(text, " ");
+    while (token) {
+        reverse(token);
+        printf(" ");
+        token = strtok(NULL, " ");
+    }
+    return 0;
+}
