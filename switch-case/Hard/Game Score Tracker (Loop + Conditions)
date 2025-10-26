@@ -1,0 +1,17 @@
+#include <stdio.h>
+int main() {
+    int score=0, ch;
+    do {
+        printf("\n1.Win Round 2.Lose Round 3.Check Score 4.Exit: ");
+        scanf("%d",&ch);
+        switch(ch) {
+            case 1: score+=10; break;
+            case 2: score-=5; break;
+            case 3: printf("Current Score: %d\n",score); break;
+            case 4: break;
+            default: printf("Invalid\n");
+        }
+    } while(ch!=4);
+    printf("Final Score: %d\n",score);
+    return 0;
+}
