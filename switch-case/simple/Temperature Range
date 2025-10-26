@@ -1,0 +1,13 @@
+#include <stdio.h>
+int main() {
+    int temp;
+    printf("Enter temperature: ");
+    scanf("%d", &temp);
+    switch(temp / 10) {
+        case 0: case 1: printf("Cold\n"); break;
+        case 2: case 3: printf("Warm\n"); break;
+        case 4: case 5: printf("Hot\n"); break;
+        default: printf("Very Hot\n");
+    }
+    return 0;
+}
