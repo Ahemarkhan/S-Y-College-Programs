@@ -1,0 +1,14 @@
+#include <stdio.h>
+int main() {
+    int n, i, j, ch, temp, arr[100];
+    printf("Enter number of elements: "); scanf("%d",&n);
+    for(i=0;i<n;i++) scanf("%d",&arr[i]);
+    printf("1.Ascending 2.Descending: "); scanf("%d",&ch);
+    switch(ch) {
+        case 1: for(i=0;i<n-1;i++) for(j=i+1;j<n;j++) if(arr[i]>arr[j]){ temp=arr[i]; arr[i]=arr[j]; arr[j]=temp; } break;
+        case 2: for(i=0;i<n-1;i++) for(j=i+1;j<n;j++) if(arr[i]<arr[j]){ temp=arr[i]; arr[i]=arr[j]; arr[j]=temp; } break;
+        default: printf("Invalid\n"); return 0;
+    }
+    printf("Sorted array: "); for(i=0;i<n;i++) printf("%d ",arr[i]);
+    return 0;
+}
