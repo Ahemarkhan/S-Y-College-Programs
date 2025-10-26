@@ -1,0 +1,13 @@
+#include <stdio.h>
+int main() {
+    int speed;
+    printf("Enter speed: ");
+    scanf("%d", &speed);
+    switch(speed/20) {
+        case 0: case 1: printf("Slow\n"); break;
+        case 2: printf("Moderate\n"); break;
+        case 3: printf("Fast\n"); break;
+        default: printf("Overspeeding!\n");
+    }
+    return 0;
+}
