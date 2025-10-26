@@ -1,0 +1,17 @@
+#include <stdio.h>
+int main() {
+    int stock=50,ch,qty;
+    do {
+        printf("\n1.Add Stock 2.Remove Stock 3.Check Stock 4.Exit: ");
+        scanf("%d",&ch);
+        switch(ch) {
+            case 1: printf("Qty to add: "); scanf("%d",&qty); stock+=qty; break;
+            case 2: printf("Qty to remove: "); scanf("%d",&qty); 
+                    if(qty<=stock) stock-=qty; else printf("Not enough stock\n"); break;
+            case 3: printf("Current stock: %d\n",stock); break;
+            case 4: break;
+            default: printf("Invalid\n");
+        }
+    } while(ch!=4);
+    return 0;
+}
