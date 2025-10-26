@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char text[200];
+    char words[50][20];
+    int n = 0;
+
+    printf("Enter text: ");
+    gets(text);
+
+    char *token = strtok(text, " ");
+    while (token) {
+        int duplicate = 0;
+        for (int i = 0; i < n; i++)
+            if (strcmp(words[i], token) == 0) duplicate = 1;
+        if (!duplicate)
+            strcpy(words[n++], token);
+        token = strtok(NULL, " ");
+    }
+
+    printf("After removing duplicates:\n");
+    for (int i = 0; i < n; i++)
+        printf("%s ", words[i]);
+    return 0;
+}
