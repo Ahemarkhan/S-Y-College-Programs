@@ -1,0 +1,13 @@
+#include <stdio.h>
+int main() {
+    int plan;
+    printf("1.Data Pack 2.Talktime 3.International Pack: ");
+    scanf("%d", &plan);
+    switch(plan) {
+        case 1: printf("1GB/day for 28 days - ₹199\n"); break;
+        case 2: printf("Talktime ₹100 - ₹88\n"); break;
+        case 3: printf("International pack - ₹499\n"); break;
+        default: printf("Invalid plan\n");
+    }
+    return 0;
+}
