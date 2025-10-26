@@ -1,0 +1,13 @@
+#include <stdio.h>
+int main() {
+    int units;
+    printf("Enter electricity units used: ");
+    scanf("%d", &units);
+    switch(units/100) {
+        case 0: printf("Bill = %d\n", units*2); break;
+        case 1: printf("Bill = %d\n", units*3); break;
+        case 2: case 3: printf("Bill = %d\n", units*4); break;
+        default: printf("Bill = %d\n", units*5);
+    }
+    return 0;
+}
