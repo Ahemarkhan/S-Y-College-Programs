@@ -1,0 +1,17 @@
+#include <stdio.h>
+int main() {
+    int choice;
+    do {
+        printf("\n1.Lights 2.Fan 3.AC 4.Security 5.Exit: ");
+        scanf("%d",&choice);
+        switch(choice) {
+            case 1: printf("Lights toggled.\n"); break;
+            case 2: printf("Fan speed adjusted.\n"); break;
+            case 3: printf("AC temperature changed.\n"); break;
+            case 4: printf("Security system activated.\n"); break;
+            case 5: break;
+            default: printf("Invalid\n");
+        }
+    } while(choice!=5);
+    return 0;
+}
