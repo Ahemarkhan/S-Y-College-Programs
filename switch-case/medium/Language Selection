@@ -1,0 +1,14 @@
+#include <stdio.h>
+int main() {
+    int lang;
+    printf("1.English 2.Hindi 3.French 4.Spanish: ");
+    scanf("%d", &lang);
+    switch(lang) {
+        case 1: printf("Hello!\n"); break;
+        case 2: printf("Namaste!\n"); break;
+        case 3: printf("Bonjour!\n"); break;
+        case 4: printf("Hola!\n"); break;
+        default: printf("Invalid language\n");
+    }
+    return 0;
+}
