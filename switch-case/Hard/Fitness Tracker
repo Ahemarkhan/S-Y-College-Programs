@@ -1,0 +1,22 @@
+#include <stdio.h>
+int main() {
+    int steps=0, ch;
+    do {
+        printf("\n1.Add Steps 2.Reset Steps 3.Show Level 4.Exit: ");
+        scanf("%d",&ch);
+        switch(ch) {
+            case 1: { int s; printf("Enter steps: "); scanf("%d",&s); steps+=s; break; }
+            case 2: steps=0; break;
+            case 3: 
+                switch(steps/5000) {
+                    case 0: printf("Sedentary\n"); break;
+                    case 1: printf("Active\n"); break;
+                    case 2: case 3: printf("Very Active\n"); break;
+                    default: printf("Athlete Mode\n");
+                } break;
+            case 4: break;
+            default: printf("Invalid\n");
+        }
+    } while(ch!=4);
+    return 0;
+}
