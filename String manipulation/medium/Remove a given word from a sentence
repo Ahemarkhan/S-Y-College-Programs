@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str[200], word[50], result[200] = "";
+    printf("Enter a sentence: ");
+    gets(str);
+    printf("Enter word to remove: ");
+    gets(word);
+
+    char *token = strtok(str, " ");
+    while (token != NULL) {
+        if (strcmp(token, word) != 0) {
+            strcat(result, token);
+            strcat(result, " ");
+        }
+        token = strtok(NULL, " ");
+    }
+    printf("After removal: %s\n", result);
+    return 0;
+}
