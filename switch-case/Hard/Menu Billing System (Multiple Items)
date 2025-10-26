@@ -1,0 +1,18 @@
+#include <stdio.h>
+int main() {
+    int choice, qty; float total=0;
+    do {
+        printf("1.Burger(100) 2.Pizza(200) 3.Pasta(150) 4.Exit\n");
+        scanf("%d",&choice);
+        if(choice==4) break;
+        printf("Qty: "); scanf("%d",&qty);
+        switch(choice) {
+            case 1: total+=100*qty; break;
+            case 2: total+=200*qty; break;
+            case 3: total+=150*qty; break;
+            default: printf("Invalid\n");
+        }
+    } while(choice!=4);
+    printf("Total Bill = ₹%.2f\n", total);
+    return 0;
+}
