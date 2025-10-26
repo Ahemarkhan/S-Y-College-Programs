@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char para[500];
+    printf("Enter paragraph: ");
+    gets(para);
+
+    int count = 0;
+    for (int i = 0; para[i]; i++)
+        if (para[i] == '.' || para[i] == '?' || para[i] == '!')
+            count++;
+
+    printf("Total sentences: %d\n", count);
+    return 0;
+}
