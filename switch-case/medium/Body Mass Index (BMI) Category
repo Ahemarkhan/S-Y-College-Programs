@@ -1,0 +1,13 @@
+#include <stdio.h>
+int main() {
+    float bmi;
+    printf("Enter BMI: ");
+    scanf("%f", &bmi);
+    switch((int)bmi/5) {
+        case 2: printf("Underweight\n"); break;
+        case 3: printf("Normal\n"); break;
+        case 4: case 5: printf("Overweight\n"); break;
+        default: printf("Obese\n");
+    }
+    return 0;
+}
