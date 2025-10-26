@@ -1,0 +1,13 @@
+#include <stdio.h>
+int main() {
+    float amt;
+    printf("Enter purchase amount: ");
+    scanf("%f", &amt);
+    switch((int)(amt/1000)) {
+        case 0: printf("No discount.\n"); break;
+        case 1: printf("5%% discount.\n"); break;
+        case 2: printf("10%% discount.\n"); break;
+        default: printf("15%% discount.\n");
+    }
+    return 0;
+}
