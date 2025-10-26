@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <string.h>
+struct Student { int roll; char name[30]; };
+int main() {
+    struct Student s[100]; int count=0, choice, i, roll;
+    char name[30];
+    do {
+        printf("\n1.Add 2.View 3.Delete 4.Exit: ");
+        scanf("%d",&choice);
+        switch(choice) {
+            case 1: printf("Enter roll & name: ");
+                    scanf("%d %s",&s[count].roll,s[count].name);
+                    count++; break;
+            case 2: 
+                for(i=0;i<count;i++) printf("%d %s\n",s[i].roll,s[i].name);
+                break;
+            case 3: printf("Enter roll to delete: ");
+                    scanf("%d",&roll);
+                    for(i=0;i<count;i++) if(s[i].roll==roll) s[i]=s[--count];
+                    break;
+            case 4: break;
+            default: printf("Invalid\n");
+        }
+    } while(choice!=4);
+    return 0;
+}
