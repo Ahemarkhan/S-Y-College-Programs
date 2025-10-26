@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <math.h>
+int main() {
+    int choice;
+    printf("1.Circle 2.Rectangle 3.Triangle: ");
+    scanf("%d", &choice);
+    switch(choice) {
+        case 1: {
+            float r; printf("Enter radius: "); scanf("%f",&r);
+            printf("Area = %.2f\n", 3.14*r*r);
+            break;
+        }
+        case 2: {
+            float l,b; printf("Enter length,breadth: "); scanf("%f%f",&l,&b);
+            printf("Area = %.2f\n", l*b);
+            break;
+        }
+        case 3: {
+            float b,h; printf("Enter base,height: "); scanf("%f%f",&b,&h);
+            printf("Area = %.2f\n", 0.5*b*h);
+            break;
+        }
+        default: printf("Invalid shape\n");
+    }
+    return 0;
+}
