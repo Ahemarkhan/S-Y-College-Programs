@@ -1,0 +1,11 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char input[100], command[20], param[20];
+    printf("Enter command (e.g., MOVE 10): ");
+    gets(input);
+    sscanf(input, "%s %s", command, param);
+    printf("Command: %s\nParameter: %s\n", command, param);
+    return 0;
+}
