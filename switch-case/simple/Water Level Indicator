@@ -1,0 +1,14 @@
+#include <stdio.h>
+int main() {
+    int level;
+    printf("Enter level (1=Low, 2=Medium, 3=High, 4=Overflow): ");
+    scanf("%d", &level);
+    switch(level) {
+        case 1: printf("Need to fill.\n"); break;
+        case 2: printf("Stable level.\n"); break;
+        case 3: printf("Near full.\n"); break;
+        case 4: printf("Overflow! Stop motor.\n"); break;
+        default: printf("Invalid input.\n");
+    }
+    return 0;
+}
