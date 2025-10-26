@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char cmd[100];
+    printf("Enter command: ");
+    gets(cmd);
+
+    if (strstr(cmd, "start"))
+        printf("System starting...\n");
+    else if (strstr(cmd, "stop"))
+        printf("System stopping...\n");
+    else
+        printf("Unknown command.\n");
+
+    return 0;
+}
