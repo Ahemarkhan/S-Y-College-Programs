@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() {
+    int opt;
+    printf("1.Play 2.Pause 3.Next 4.Previous 5.Stop: ");
+    scanf("%d", &opt);
+    switch(opt) {
+        case 1: printf("Playing music...\n"); break;
+        case 2: printf("Music paused.\n"); break;
+        case 3: printf("Next track...\n"); break;
+        case 4: printf("Previous track...\n"); break;
+        case 5: printf("Music stopped.\n"); break;
+        default: printf("Invalid option.\n");
+    }
+    return 0;
+}
