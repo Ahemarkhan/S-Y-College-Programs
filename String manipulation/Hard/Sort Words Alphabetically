@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char text[200], words[50][20];
+    int n = 0;
+
+    printf("Enter text: ");
+    gets(text);
+
+    char *token = strtok(text, " ");
+    while (token) {
+        strcpy(words[n++], token);
+        token = strtok(NULL, " ");
+    }
+
+    for (int i = 0; i < n - 1; i++)
+        for (int j = i + 1; j < n; j++)
+            if (strcmp(words[i], words[j]) > 0) {
+                char temp[20];
+                strcpy(temp, words[i]);
+                strcpy(words[i], words[j]);
+                strcpy(words[j], temp);
+            }
+
+    printf("Sorted words:\n");
+    for (int i = 0; i < n; i++)
+        printf("%s ", words[i]);
+    return 0;
+}
