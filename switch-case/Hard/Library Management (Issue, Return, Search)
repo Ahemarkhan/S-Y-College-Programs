@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <string.h>
+struct Book { int id; char name[30]; };
+int main() {
+    struct Book b[50]; int count=0, ch, i, id;
+    char name[30];
+    do {
+        printf("\n1.Add 2.View 3.Search 4.Exit: ");
+        scanf("%d",&ch);
+        switch(ch) {
+            case 1: printf("Enter id & name: "); scanf("%d %s",&b[count].id,b[count].name); count++; break;
+            case 2: for(i=0;i<count;i++) printf("%d %s\n",b[i].id,b[i].name); break;
+            case 3: printf("Enter id: "); scanf("%d",&id);
+                    for(i=0;i<count;i++) if(b[i].id==id) printf("Found: %s\n",b[i].name);
+                    break;
+            case 4: break;
+            default: printf("Invalid\n");
+        }
+    } while(ch!=4);
+    return 0;
+}
