@@ -1,0 +1,13 @@
+#include <stdio.h>
+int main() {
+    int level;
+    printf("Enter level (1=Easy, 2=Medium, 3=Hard): ");
+    scanf("%d", &level);
+    switch(level) {
+        case 1: printf("You chose Easy mode.\n"); break;
+        case 2: printf("You chose Medium mode.\n"); break;
+        case 3: printf("You chose Hard mode.\n"); break;
+        default: printf("Invalid level.\n");
+    }
+    return 0;
+}
