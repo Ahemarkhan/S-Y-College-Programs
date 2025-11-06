@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+struct Car {
+    char brand[20];
+    int year;
+    float price;
+};
+
+int main() {
+    struct Car c1 = {"Toyota", 2020, 450000.50};
+    printf("Brand: %s\nYear: %d\nPrice: %.2f\n", c1.brand, c1.year, c1.price);
+    return 0;
+}
