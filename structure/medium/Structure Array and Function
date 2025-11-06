@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+struct Employee {
+    int id;
+    char name[20];
+    float salary;
+};
+
+void show(struct Employee e[], int n) {
+    for(int i=0;i<n;i++)
+        printf("%d %s %.2f\n", e[i].id, e[i].name, e[i].salary);
+}
+
+int main() {
+    struct Employee emp[3] = {{1,"Ravi",5000},{2,"Asha",7000},{3,"Kiran",6000}};
+    show(emp,3);
+    return 0;
+}
