@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+struct Student {
+    char name[20];
+    float marks;
+};
+
+int main() {
+    struct Student s = {"Ahemar", 82};
+
+    if(s.marks >= 75) printf("Distinction\n");
+    else if(s.marks >= 60) printf("First Class\n");
+    else if(s.marks >= 50) printf("Second Class\n");
+    else printf("Fail\n");
+
+    return 0;
+}
