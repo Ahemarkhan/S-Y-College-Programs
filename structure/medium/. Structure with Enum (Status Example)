@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+enum Status {ACTIVE, INACTIVE};
+
+struct User {
+    char name[20];
+    enum Status state;
+};
+
+int main() {
+    struct User u1 = {"Rahul", ACTIVE};
+    printf("User: %s | Status: %s\n", u1.name, (u1.state==ACTIVE)?"Active":"Inactive");
+    return 0;
+}
