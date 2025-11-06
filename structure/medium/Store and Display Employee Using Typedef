@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+typedef struct {
+    int id;
+    char name[30];
+    float salary;
+} Employee;
+
+int main() {
+    Employee e = {101,"Amit",4500};
+    printf("ID: %d | Name: %s | Salary: %.2f\n", e.id, e.name, e.salary);
+    return 0;
+}
