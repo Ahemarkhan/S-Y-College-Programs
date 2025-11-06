@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+typedef struct {
+    int id;
+    char name[20];
+} Employee;
+
+int main() {
+    Employee e1 = {101, "Rohit"};
+    printf("ID: %d\nName: %s\n", e1.id, e1.name);
+    return 0;
+}
