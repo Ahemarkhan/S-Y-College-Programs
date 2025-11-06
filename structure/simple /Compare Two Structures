@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <string.h>
+
+struct Student {
+    char name[30];
+    int roll;
+};
+
+int main() {
+    struct Student s1 = {"Amit", 1};
+    struct Student s2 = {"Amit", 1};
+
+    if (s1.roll == s2.roll && strcmp(s1.name, s2.name) == 0)
+        printf("Both students are same.\n");
+    else
+        printf("Different students.\n");
+    return 0;
+}
