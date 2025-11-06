@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+struct Date {
+    int day, month, year;
+};
+
+int main() {
+    struct Date d1 = {5,11,2025}, d2 = {6,11,2025};
+
+    if(d1.day==d2.day && d1.month==d2.month && d1.year==d2.year)
+        printf("Dates are same\n");
+    else
+        printf("Dates are different\n");
+    return 0;
+}
