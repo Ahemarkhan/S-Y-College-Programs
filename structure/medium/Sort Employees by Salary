@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+struct Emp {
+    char name[20];
+    float salary;
+};
+
+int main() {
+    struct Emp e[3] = {{"Ravi",8000},{"Sita",6000},{"Amit",7000}};
+    struct Emp temp;
+
+    for(int i=0;i<3;i++)
+        for(int j=i+1;j<3;j++)
+            if(e[i].salary < e[j].salary) {
+                temp=e[i];
+                e[i]=e[j];
+                e[j]=temp;
+            }
+
+    for(int i=0;i<3;i++)
+        printf("%s %.2f\n", e[i].name, e[i].salary);
+    return 0;
+}
