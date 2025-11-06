@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <math.h>
+
+struct Point {
+    float x, y;
+};
+
+float distance(struct Point a, struct Point b) {
+    return sqrt(pow(b.x-a.x,2) + pow(b.y-a.y,2));
+}
+
+int main() {
+    struct Point p1 = {2,3}, p2 = {5,7};
+    printf("Distance = %.2f\n", distance(p1,p2));
+    return 0;
+}
