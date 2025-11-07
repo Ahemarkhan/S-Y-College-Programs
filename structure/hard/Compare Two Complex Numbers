@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+struct Complex {
+    float real, imag;
+};
+
+int main() {
+    struct Complex c1={3,4}, c2={3,4};
+    if(c1.real==c2.real && c1.imag==c2.imag)
+        printf("Both complex numbers are equal\n");
+    else
+        printf("Not equal\n");
+    return 0;
+}
