@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+struct Employee {
+    char name[20];
+    float salary;
+};
+
+int main() {
+    struct Employee e[3] = {{"Ravi",8000},{"Amit",5000},{"Sita",9000}};
+    int max=0, min=0;
+    for(int i=1;i<3;i++) {
+        if(e[i].salary > e[max].salary) max=i;
+        if(e[i].salary < e[min].salary) min=i;
+    }
+    printf("Highest: %s %.2f\nLowest: %s %.2f\n", e[max].name,e[max].salary,e[min].name,e[min].salary);
+    return 0;
+}
