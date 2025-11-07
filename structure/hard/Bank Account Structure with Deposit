@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+struct Account {
+    int id;
+    char name[20];
+    float balance;
+};
+
+void deposit(struct Account *a, float amt){ a->balance += amt; }
+void withdraw(struct Account *a, float amt){ a->balance -= amt; }
+
+int main() {
+    struct Account a = {101,"Ravi",5000};
+    deposit(&a,1000);
+    withdraw(&a,1500);
+    printf("Final Balance: %.2f\n", a.balance);
+    return 0;
+}
