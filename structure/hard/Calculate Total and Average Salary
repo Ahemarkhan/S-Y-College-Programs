@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+struct Employee {
+    int id;
+    float salary;
+};
+
+int main() {
+    struct Employee e[4];
+    float total=0;
+    for(int i=0;i<4;i++) {
+        scanf("%d %f", &e[i].id, &e[i].salary);
+        total += e[i].salary;
+    }
+    printf("Total Salary = %.2f\nAverage Salary = %.2f\n", total, total/4);
+    return 0;
+}
