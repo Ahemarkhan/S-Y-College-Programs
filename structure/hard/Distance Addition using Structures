@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+struct Distance {
+    int km;
+    int m;
+};
+
+int main() {
+    struct Distance d1 = {5, 750}, d2 = {3, 500}, sum;
+    sum.km = d1.km + d2.km + (d1.m + d2.m)/1000;
+    sum.m = (d1.m + d2.m) % 1000;
+    printf("Total Distance: %d km %d m\n", sum.km, sum.m);
+    return 0;
+}
