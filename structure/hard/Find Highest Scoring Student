@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+struct Student {
+    char name[20];
+    float marks;
+};
+
+int main() {
+    struct Student s[4] = {{"Amit",75},{"Ravi",88},{"Sita",91},{"Neha",86}};
+    int max=0;
+    for(int i=1;i<4;i++)
+        if(s[i].marks > s[max].marks)
+            max=i;
+    printf("Topper: %s (%.2f)\n", s[max].name, s[max].marks);
+    return 0;
+}
