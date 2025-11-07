@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+struct Student {
+    int roll;
+    char name[20];
+    float marks[5];
+    float total, percent;
+    char grade;
+};
+
+int main() {
+    struct Student s;
+    s.total = 0;
+    printf("Enter roll, name: ");
+    scanf("%d %s", &s.roll, s.name);
+    printf("Enter 5 subject marks: ");
+    for(int i=0;i<5;i++) {
+        scanf("%f", &s.marks[i]);
+        s.total += s.marks[i];
+    }
+    s.percent = s.total / 5;
+    if(s.percent >= 85) s.grade='A';
+    else if(s.percent >= 70) s.grade='B';
+    else if(s.percent >= 50) s.grade='C';
+    else s.grade='F';
+
+    printf("\nName: %s | Total: %.2f | Percent: %.2f | Grade: %c\n", s.name, s.total, s.percent, s.grade);
+    return 0;
+}
