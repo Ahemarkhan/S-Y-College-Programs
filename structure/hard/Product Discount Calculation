@@ -1,0 +1,13 @@
+#include <stdio.h>
+
+struct Product {
+    char name[20];
+    float price, discount;
+};
+
+int main() {
+    struct Product p = {"TV", 50000, 10};
+    float final = p.price - (p.price * p.discount / 100);
+    printf("Product: %s | Final Price: %.2f\n", p.name, final);
+    return 0;
+}
